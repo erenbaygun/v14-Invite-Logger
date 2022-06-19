@@ -1,0 +1,18 @@
+module.exports = {
+    bot: {
+        token: '',
+        botID: '',
+        prefix: '',
+        owner: [''],
+        status: "Made with ❤️ by Sanctus"
+    },
+
+    mongoURL: "",
+
+    emoji: {
+        emojiname: '<:name:id>',
+        animatedemojiname: '<a:name:id>'
+    }
+};
+
+// This file is a example for the config.js file
