@@ -5,6 +5,6 @@ module.exports = {
     permissions: [],
 
     run: async (client, message, args) => {
-        message.reply('you runned the test command')
+        message.reply('test komutunu çalıştırdın')
     }
 }
