@@ -9,6 +9,10 @@ module.exports = {
 
     mongoURL: "",
 
+    channels: {
+        inviteLog: ''
+    },
+
     emoji: {
         emojiname: '<:name:id>',
         animatedemojiname: '<a:name:id>'
