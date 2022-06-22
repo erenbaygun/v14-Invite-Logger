@@ -1,11 +1,12 @@
 module.exports = {
     bot: {
         token: '',
-        botID: '',
         prefix: '',
         owner: [''],
         status: "Made with ❤️ by Sanctus"
     },
+
+    guildId: "773550825008136212",
 
     mongoURL: "",
 
