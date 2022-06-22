@@ -2,7 +2,6 @@ module.exports = {
     bot: {
         token: '',
         prefix: '',
-        owner: [''],
         status: "Made with ❤️ by Sanctus"
     },
 
