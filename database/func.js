@@ -1,12 +1,9 @@
 const userDB = require("./schemas/user")
+const inviteDB = require("./schemas/invite");
 
-module.exports.getInvites = async function (userID) {
-    const userData = await userDB.findOne({ userID: userID })
-    if (!userData) {
-        userData = await new userDB({
-            userID: userID,
-            invites: []
-        }).save()
-    }
-    return userData.invites
+module.exports.getUserCodes = async function (userId) {
+    const userData = await userDB.findOne({ userId: userId })
+
+    if (!userData) return []
+    return userData.codes
 }

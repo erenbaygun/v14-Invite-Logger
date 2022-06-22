@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
-    userID: String,
-    invites: [Object],
+    userId: String,
+    invites: Number,
+    inviter: Object
 });
 
 const user = mongoose.model('user', userSchema, 'userData');
