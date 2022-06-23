@@ -32,7 +32,7 @@ module.exports = {
         status: "Made with ❤️ by Sanctus"
     },
 
-    guildId: "SUNUCU_ID",
+    serverId: "SUNUCU_ID",
 
     mongoURL: "MONGODB_URL",
 
