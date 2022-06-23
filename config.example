@@ -5,7 +5,7 @@ module.exports = {
         status: "Made with ❤️ by Sanctus"
     },
 
-    guildId: "773550825008136212",
+    serverId: "773550825008136212",
 
     mongoURL: "",
 
