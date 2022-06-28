@@ -10,8 +10,8 @@
 ## ✨ Gereksinimler
 - [Node.js](https://nodejs.org/en/) v16.15.0 ya da daha güncel bir sürümü ve [MongoDB](https://www.mongodb.com/) indirmelisin.
 - Discord botunun tokenine ve MongoDB Bağlantısını sahip olmalısın.
-- Bot Tokenini nasıl alacağını bilmiyorsan **[Rehber'e Göz At](https://discordjs.guide/preparations/setting-up-a-bot-application.html#your-token)**
-- MongoDB Bağlantısını nasıl alacağını bilmiyorsan **[Videoya Göz At](https://www.youtube.com/watch?v=VKRIz9s9V70)**
+- Bot Tokenini nasıl alacağını bilmiyorsan --> **[Rehber'e Göz At](https://discordjs.guide/preparations/setting-up-a-bot-application.html#your-token)**
+- MongoDB Bağlantısını nasıl alacağını bilmiyorsan --> **[Videoya Göz At](https://www.youtube.com/watch?v=VKRIz9s9V70)**
 
 ## 🚀 Kurulum
 - Dosyaları indirin.
