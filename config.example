@@ -13,6 +13,10 @@ module.exports = {
         inviteLog: ''
     },
 
+    text: {
+        joinMessage: "{newMember} sunucuya katıldı.\nDavet eden: {inviter} ( {inviteCount} )"
+    },
+
     emoji: {
         emojiname: '<:name:id>',
         animatedemojiname: '<a:name:id>'

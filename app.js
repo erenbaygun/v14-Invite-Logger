@@ -1,5 +1,4 @@
 const { Client, Collection } = require("discord.js");
-const { readdirSync, readdir } = require("fs");
 
 const client = global.client = new Client({ intents: 32767 })
 

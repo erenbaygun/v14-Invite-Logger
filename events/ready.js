@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const inviteDB = require("../database/schemas/invite")
 const database = require("../database/func")
 
 module.exports = async (client) => {

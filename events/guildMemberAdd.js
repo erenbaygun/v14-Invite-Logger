@@ -15,6 +15,8 @@ module.exports = async (client, member) => {
         }
     })
 
+    let inviter = client.users.cache.get(usedInvite.inviter.id)
+
     database.resetGuildInvitesData(member.guild)
 
     await userDB.findOneAndUpdate({ userId: member.id },
@@ -35,4 +37,12 @@ module.exports = async (client, member) => {
         },
         { upsert: true }
     )
+
+    let inviteLogChannel = await member.guild.channels.cache.get(client.config.channels.inviteLog)
+
+
+    let text = client.config.text.joinMessage.replace(`{newMember}`, member).replace(`{inviter}`, inviter).replace(`{inviteCount}`, usedInvite.uses)
+    await inviteLogChannel.send({ content: text })
+
+    client.logger.log(`${client.color.chalkcolor.green(`[+]`)} ${client.color.chalkcolor.magenta(`${member.user.tag}`)}, sunucuya katıldı - Davet eden: ${client.color.chalkcolor.blue(`${inviter.tag}`)}`)
 };
