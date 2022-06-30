@@ -1,12 +1,13 @@
 const userDB = require("../database/schemas/user")
 
 module.exports = async (client, member) => {
+    if (!member.guild.available || member.user.bot || member.guild.id !== client.config.serverId) return;
+
+
     let inviteLogChannel = await member.guild.channels.cache.get(client.config.channels.inviteLog)
-
-
     let leaveText = client.config.text.leaveMessage.replace(`{member}`, `\`${member.user.tag}\``)
-    await inviteLogChannel.send({ content: leaveText })
 
+    await inviteLogChannel.send({ content: leaveText })
     client.logger.log(`${client.color.chalkcolor.red(`[-]`)} ${client.color.chalkcolor.magenta(`${member.user.tag}`)}, sunucudan ayrıldı.`)
 
 

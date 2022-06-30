@@ -61,3 +61,7 @@ module.exports.deleteOldInviteData = async function (invite) {
         }
     )
 }
+
+module.exports.getLeaderboard = async function () {
+    return await userDB.find().sort({ invites: -1 })
+}
