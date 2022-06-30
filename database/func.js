@@ -33,11 +33,6 @@ module.exports.resetGuildInvitesData = async function (guild) {
                 }
             }
         )
-
-        await userDB.findOneAndUpdate({ guildId: guild.id }, {
-            userId: invite.inviter.id,
-
-        }, { upsert: true });
     });
 
     client.logger.database(`${guildInvites.size} davet verisi güncellendi.`)
