@@ -17,6 +17,7 @@ module.exports = {
 
         let userData = await userDB.findOne({ userId: user.id })
         if (!userData) return message.reply(`Bu kullanıcıya ait davet verisi bulunmuyor.`)
+
         let leaderboard = await database.getLeaderboard()
         let i = 1
         let rank
@@ -25,11 +26,20 @@ module.exports = {
             else rank = i
         })
 
+        let activeUserInvites = await database.getActiveUserInvites(user.id, message.guild)
+        let activeInviteText = "";
+
+        if (activeUserInvites == []) activeInviteText = `Aktif davet bulunmuyor.`
+        else activeUserInvites.forEach(invite => {
+            activeInviteText += `${invite.url} --> ${invite.uses} kullanım\n`
+        })
+
         let embed = new Discord.MessageEmbed()
             .setAuthor({ name: user.tag, iconURL: user.displayAvatarURL({ dynamic: true }) })
             .setColor("AQUA")
             .addField('Davet Sayısı:', `${userData.invites}`, true)
             .addField('Sıralama:', `#${rank}`, true)
+            .addField('Aktif Davetler:', `${activeInviteText}`)
 
         message.reply({ embeds: [embed] })
     }

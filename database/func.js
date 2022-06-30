@@ -33,6 +33,11 @@ module.exports.resetGuildInvitesData = async function (guild) {
                 }
             }
         )
+
+        await userDB.findOneAndUpdate({ guildId: guild.id }, {
+            userId: invite.inviter.id,
+
+        }, { upsert: true });
     });
 
     client.logger.database(`${guildInvites.size} davet verisi güncellendi.`)
@@ -64,4 +69,15 @@ module.exports.deleteOldInviteData = async function (invite) {
 
 module.exports.getLeaderboard = async function () {
     return await userDB.find().sort({ invites: -1 })
+}
+
+module.exports.getActiveUserInvites = async function (userId, guild) {
+    const guildInvites = await guild.invites.fetch()
+
+    let activeInvites = [];
+    await guildInvites.forEach(async invite => {
+        if (invite.inviter.id == userId) activeInvites.push({ url: `discord.gg/${invite.code}`, uses: invite.uses })
+    });
+
+    return activeInvites
 }
