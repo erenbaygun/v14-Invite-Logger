@@ -71,7 +71,7 @@ module.exports.getActiveUserInvites = async function (userId, guild) {
 
     let activeInvites = [];
     await guildInvites.forEach(async invite => {
-        if (invite.inviter.id == userId) activeInvites.push({ url: `discord.gg/${invite.code}`, uses: invite.uses })
+        if (invite.inviter.id == userId) activeInvites.push({ code: invite.code, uses: invite.uses })
     });
 
     return activeInvites

@@ -29,17 +29,17 @@ module.exports = {
         let activeUserInvites = await database.getActiveUserInvites(user.id, message.guild)
         let activeInviteText = "";
 
-        if (activeUserInvites == []) activeInviteText = `Aktif davet bulunmuyor.`
+        if (!activeUserInvites[0]) activeInviteText = `Aktif davet bulunmuyor.`
         else activeUserInvites.forEach(invite => {
-            activeInviteText += `${invite.url} --> ${invite.uses} kullanım\n`
+            activeInviteText += `- gg/${invite.code}  --->  **${invite.uses}** kullanım\n`
         })
 
         let embed = new Discord.MessageEmbed()
             .setAuthor({ name: user.tag, iconURL: user.displayAvatarURL({ dynamic: true }) })
             .setColor("AQUA")
-            .addField('Davet Sayısı:', `${userData.invites}`, true)
             .addField('Sıralama:', `#${rank}`, true)
-            .addField('Aktif Davetler:', `${activeInviteText}`)
+            .addField('Davet sayısı:', `${userData.invites}`, true)
+            .addField('Aktif davetler:', `${activeInviteText}`)
 
         message.reply({ embeds: [embed] })
     }
