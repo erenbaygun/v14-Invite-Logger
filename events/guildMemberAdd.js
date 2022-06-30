@@ -14,35 +14,39 @@ module.exports = async (client, member) => {
             usedInvite = invite
         }
     })
+    if (!usedInvite) {
 
-    let inviter = client.users.cache.get(usedInvite.inviter.id)
+    } else {
 
-    database.resetGuildInvitesData(member.guild)
+        let inviter = client.users.cache.get(usedInvite.inviter.id)
 
-    await userDB.findOneAndUpdate({ userId: member.id },
-        {
-            userId: member.id,
-            invites: 0,
-            inviterId: usedInvite.inviter.id
-        },
-        { upsert: true }
-    )
+        await database.resetGuildInvitesData(member.guild)
 
-    await userDB.findOneAndUpdate({ userId: usedInvite.inviter.id },
-        {
-            userId: usedInvite.inviter.id,
-            $inc: {
-                invites: 1
-            }
-        },
-        { upsert: true }
-    )
+        await userDB.findOneAndUpdate({ userId: member.id },
+            {
+                userId: member.id,
+                invites: 0,
+                inviterId: usedInvite.inviter.id
+            },
+            { upsert: true }
+        )
 
-    let inviteLogChannel = await member.guild.channels.cache.get(client.config.channels.inviteLog)
+        await userDB.findOneAndUpdate({ userId: usedInvite.inviter.id },
+            {
+                userId: usedInvite.inviter.id,
+                $inc: {
+                    invites: 1
+                }
+            },
+            { upsert: true }
+        )
+
+        let inviteLogChannel = await member.guild.channels.cache.get(client.config.channels.inviteLog)
 
 
-    let joinText = client.config.text.joinMessage.replace(`{newMember}`, member).replace(`{inviter}`, `\`${inviter.tag}\``).replace(`{inviteCount}`, usedInvite.uses)
-    await inviteLogChannel.send({ content: joinText })
+        let joinText = client.config.text.joinMessage.replace(`{newMember}`, member).replace(`{inviter}`, `\`${inviter.tag}\``).replace(`{inviteCount}`, usedInvite.uses)
+        await inviteLogChannel.send({ content: joinText })
 
-    client.logger.log(`${client.color.chalkcolor.green(`[+]`)} ${client.color.chalkcolor.magenta(`${member.user.tag}`)}, sunucuya katıldı - Davet eden: ${client.color.chalkcolor.blue(`${inviter.tag}`)}`)
+        client.logger.log(`${client.color.chalkcolor.green(`[+]`)} ${client.color.chalkcolor.magenta(`${member.user.tag}`)}, sunucuya katıldı - Davet eden: ${client.color.chalkcolor.blue(`${inviter.tag}`)}`)
+    }
 };
