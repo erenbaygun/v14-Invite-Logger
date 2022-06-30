@@ -16,6 +16,6 @@ module.exports = async (client) => {
     const guild = await client.guilds.cache.find(guild => guild.id == client.config.serverId)
     const guildInvites = await guild.invites.fetch()
 
-    client.logger.database(`${client.color.chalkcolor.magenta(`${guild.name}`)} sunucusundan, ${guildInvites.size} davet verisi kaydediliyor...`)
+    client.logger.database(`${client.color.chalkcolor.blue(`${guild.name}`)} sunucusundan, ${guildInvites.size} davet verisi kaydediliyor...`)
     await database.resetGuildInvitesData(guild)
 }
