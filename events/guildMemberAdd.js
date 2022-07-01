@@ -15,7 +15,15 @@ module.exports = async (client, member) => {
         }
     })
     if (!usedInvite) {
+        await database.loadUserData(member.guild)
+        await database.resetGuildInvitesData(member.guild)
 
+        let inviteLogChannel = await member.guild.channels.cache.get(client.config.channels.inviteLog)
+
+        let joinText = client.config.text.vaintyJoinMessage.replace(`{newMember}`, member)
+        await inviteLogChannel.send({ content: joinText })
+
+        client.logger.log(`${client.color.chalkcolor.green(`[+]`)} ${client.color.chalkcolor.magenta(`${member.user.tag}`)}, sunucuya katıldı - Özel url'yi kullanarak katıldı`)
     } else {
 
         let inviter = client.users.cache.get(usedInvite.inviter.id)

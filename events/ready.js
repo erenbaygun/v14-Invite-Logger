@@ -18,4 +18,6 @@ module.exports = async (client) => {
 
     client.logger.database(`${client.color.chalkcolor.blue(`${guild.name}`)} sunucusundan, ${guildInvites.size} davet verisi kaydediliyor...`)
     await database.resetGuildInvitesData(guild)
+
+    await database.loadUserData(guild)
 }

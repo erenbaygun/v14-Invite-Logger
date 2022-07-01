@@ -30,7 +30,7 @@ module.exports = {
         let activeUserInvites = await database.getActiveUserInvites(user.id, message.guild)
         let activeInviteText = "";
 
-        if (!activeUserInvites[0]) activeInviteText = `Aktif davet bulunmuyor.`
+        if (!activeUserInvites[0]) activeInviteText = `Aktif davet verisi bulunmuyor.`
         else activeUserInvites.forEach(invite => {
             activeInviteText += `- gg/${invite.code}  --->  **${invite.uses}** kullanım\n`
         })

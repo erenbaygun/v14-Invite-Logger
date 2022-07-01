@@ -13,14 +13,19 @@ module.exports.resetGuildInvitesData = async function (guild) {
 
     await inviteDB.findOneAndUpdate({ guildId: guild.id }, {
         guildId: guild.id,
-        vanity: {
-            code: guild.vanityURLCode,
-            uses: guild.vanityURLUses
-        }
     }, { upsert: true });
 
 
-    await inviteDB.findOneAndUpdate({ guildId: guild.id }, { $set: { invites: [] } })
+    await inviteDB.findOneAndUpdate({ guildId: guild.id }, {
+        $set: {
+            invites: [],
+            vanity: {
+                code: guild.vanityURLCode,
+                uses: guild.vanityURLUses
+            }
+        }
+    })
+
     await guildInvites.forEach(async invite => {
         await inviteDB.findOneAndUpdate({ guildId: guild.id },
             {
@@ -75,4 +80,20 @@ module.exports.getActiveUserInvites = async function (userId, guild) {
     });
 
     return activeInvites
+}
+
+module.exports.loadUserData = async function (guild) {
+    await guild.members.cache.forEach(async member => {
+        if (!member.user.bot) {
+            let check = await userDB.findOne({ userId: member.id })
+            if (!check) {
+                await new userDB(
+                    {
+                        userId: member.id,
+                        invites: 0
+                    }
+                ).save()
+            }
+        }
+    })
 }
