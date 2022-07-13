@@ -47,6 +47,7 @@ module.exports = {
             .addField('Sıralama:', `#${rank}`, true)
             .addField('Davet sayısı:', `0`, true)
             .addField('Aktif davetler:', `${activeInviteText}`)
+            .setTimestamp()
 
         message.reply({ content: `**Kullanıcının davet sayısı sıfırlandı.**`, embeds: [embed] })
     }

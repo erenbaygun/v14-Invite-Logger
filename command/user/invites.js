@@ -41,6 +41,7 @@ module.exports = {
             .addField('Sıralama:', `#${rank}`, true)
             .addField('Davet sayısı:', `${userData.invites}`, true)
             .addField('Aktif davetler:', `${activeInviteText}`)
+            .setTimestamp()
 
         message.reply({ embeds: [embed] })
     }
