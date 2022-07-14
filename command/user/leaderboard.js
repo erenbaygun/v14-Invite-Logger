@@ -1,5 +1,4 @@
 const Discord = require("discord.js")
-const userDB = require("../../database/schemas/user")
 const database = require("../../database/func")
 
 module.exports = {
@@ -26,13 +25,14 @@ module.exports = {
         let embed = new Discord.MessageEmbed()
             .setAuthor({ name: `📋 Sunucu Davet Sıralaması`, iconURL: message.guild.iconURL({ dynamic: true }) })
             .setColor("AQUA")
+            .setDescription(text)
             .setFooter({ text: `Sayfa 1 / ${i % 10 == 0 ? Math.floor(i / 10) : Math.floor((i / 10) + 1)}` })
 
         if (Math.floor((i / 10) + 1) === 1) {
-            message.reply({ embeds: [embed.setDescription(text)] })
+            message.reply({ embeds: [embed] })
         } else {
             message.reply({
-                embeds: [embed.setDescription(text)],
+                embeds: [embed],
                 components: [
                     new Discord.MessageActionRow()
                         .addComponents(
@@ -45,8 +45,9 @@ module.exports = {
                         .addComponents(
                             new Discord.MessageButton()
                                 .setStyle("PRIMARY")
-                                .setCustomId(`lb_back`)
+                                .setCustomId(`lb_0`)
                                 .setEmoji(`◀`)
+                                .setDisabled(true)
                         )
                         .addComponents(
                             new Discord.MessageButton()
