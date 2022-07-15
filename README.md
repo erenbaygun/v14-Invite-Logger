@@ -50,7 +50,7 @@ module.exports = {
 
 
 
-## Not
+## 🛑 Not
 - Bir sorunla karşılaşırsan benimle iletişime geçmekten çekinme. Discord: [Sanctus#7296](https://discord.gg/MEdUDMSTMx)
 - Bir önerin mi var? Fikrini [burada](https://github.com/ErenBaygun/v13-Invite-Manager/issues/new?title=Öneri) ya da [discord sunucumda](https://discord.gg/MEdUDMSTMx) paylaşabilirsin!
 - Hakkımda daha fazla bilgi için web siteme göz at --> [sanct.me](https://sanct.me)
