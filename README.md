@@ -24,7 +24,8 @@
 - Botu beğendiysen ⭐ atmayı unutma!
 
 ## ⚙ Config
-- **`config.js` dosyasını düzenle ve gerekli yerlere değerleri gir**
+- **`config.js` dosyasını düzenle ve gerekli yerlere değerleri gir.**
+- **`config.js` dosyasını bulamıyorsan `config.js.example` dosyasını kopyalayarak bir tane oluştur.**
 ```js
 module.exports = {
     bot: {
