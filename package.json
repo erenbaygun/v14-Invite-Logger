@@ -1,7 +1,7 @@
 {
-  "name": "v13-discord-register",
+  "name": "v13-invite-manager",
   "version": "1.0.0",
-  "description": "Discord.js v13 Register / Kayıt Botu",
+  "description": "",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
@@ -9,23 +9,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ErenBaygun/v13-Discord-Register.git"
+    "url": "git+https://github.com/ErenBaygun/v13-Invite-Manager.git"
   },
   "keywords": [
     "ErenBaygun",
     "v13",
+    "discord",
     "discord-bot",
     "discord-js",
-    "register",
-    "kayıt",
-    "nodejs"
+    "invite",
+    "invite-manager"
   ],
   "author": "ErenBaygun",
-  "license": "MIT",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ErenBaygun/v13-Discord-Register/issues"
+    "url": "https://github.com/ErenBaygun/v13-Invite-Manager/issues"
   },
-  "homepage": "https://github.com/ErenBaygun/v13-Discord-Register#readme",
+  "homepage": "https://github.com/ErenBaygun/v13-Invite-Manager#readme",
   "dependencies": {
     "chalk": "^4.1.2",
     "discord.js": "^13.8.0",

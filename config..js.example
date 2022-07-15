@@ -1,0 +1,21 @@
+module.exports = {
+    bot: {
+        token: '',
+        prefix: '!',
+        status: "Made with ❤️ by Sanctus"
+    },
+
+    serverId: "",
+
+    mongoURL: "",
+
+    channels: {
+        inviteLog: ''
+    },
+
+    text: {
+        joinMessage: "**{newMember} sunucuya katıldı.**\nDavet eden: {inviter} ( {inviteCount} Davet )",
+        vaintyJoinMessage: "**{newMember} sunucuya katıldı.**\nÖzel url'yi kullanarak katıldı.",
+        leaveMessage: "**{member} sunucudan ayrıldı.**"
+    }
+};
