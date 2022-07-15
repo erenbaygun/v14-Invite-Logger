@@ -28,41 +28,40 @@ module.exports = {
             .setDescription(text)
             .setFooter({ text: `Sayfa 1 / ${i % 10 == 0 ? Math.floor(i / 10) : Math.floor((i / 10) + 1)}` })
 
-        if (Math.floor((i / 10) + 1) === 1) {
-            message.reply({ embeds: [embed] })
-        } else {
-            message.reply({
-                embeds: [embed],
-                components: [
-                    new Discord.MessageActionRow()
-                        .addComponents(
-                            new Discord.MessageButton()
-                                .setStyle("PRIMARY")
-                                .setCustomId(`lb_first`)
-                                .setEmoji(`⏮`)
-                                .setDisabled(true)
-                        )
-                        .addComponents(
-                            new Discord.MessageButton()
-                                .setStyle("PRIMARY")
-                                .setCustomId(`lb_0`)
-                                .setEmoji(`◀`)
-                                .setDisabled(true)
-                        )
-                        .addComponents(
-                            new Discord.MessageButton()
-                                .setStyle("PRIMARY")
-                                .setCustomId(`lb_2`)
-                                .setEmoji(`▶`)
-                        )
-                        .addComponents(
-                            new Discord.MessageButton()
-                                .setStyle("PRIMARY")
-                                .setCustomId(`lb_last`)
-                                .setEmoji(`⏭`)
-                        )
-                ]
-            })
+        let firstControlButton = new Discord.MessageButton()
+            .setStyle("PRIMARY")
+            .setCustomId(`lb_first`)
+            .setEmoji(`⏮`)
+            .setDisabled(true)
+
+        let backControlButton = new Discord.MessageButton()
+            .setStyle("PRIMARY")
+            .setCustomId(`lb_back`)
+            .setEmoji(`◀`)
+            .setDisabled(true)
+
+        let nextControlButton = new Discord.MessageButton()
+            .setStyle("PRIMARY")
+            .setCustomId(`lb_2`)
+            .setEmoji(`▶`)
+
+        let lastControlButton = new Discord.MessageButton()
+            .setStyle("PRIMARY")
+            .setCustomId(`lb_last`)
+            .setEmoji(`⏭`)
+
+        if ((i % 10 == 0 ? Math.floor(i / 10) : Math.floor((i / 10) + 1)) == 1) {
+            nextControlButton.setDisabled(true)
+            lastControlButton.setDisabled(true)
         }
+
+        let controlButtons = new Discord.MessageActionRow()
+            .setComponents([firstControlButton, backControlButton, nextControlButton, lastControlButton])
+
+        message.reply({
+            embeds: [embed],
+            components: [controlButtons]
+        })
+
     }
 }
