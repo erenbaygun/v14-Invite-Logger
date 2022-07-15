@@ -1,6 +1,6 @@
 <p align="center">
-<a href="https://github.com/ErenBaygun?tab=repositories"><img alt="GitHub Stars" src="https://img.shields.io/github/stars/ErenBaygun/v13-Invite-Manager?style=for-the-badg"></a> 
-<a href="https://github.com/ErenBaygun/v13-Invite-Manager/fork"><img alt="GitHub Forks" src="https://img.shields.io/github/forks/ErenBaygun/v13-Invite-Manager?style=for-the-badg"></a>
+<a href="https://github.com/ErenBaygun?tab=repositories"><img alt="GitHub Stars" src="https://img.shields.io/github/stars/ErenBaygun/v13-Invite-Manager?style=for-the-badge"></a> 
+<a href="https://github.com/ErenBaygun/v13-Invite-Manager/fork"><img alt="GitHub Forks" src="https://img.shields.io/github/forks/ErenBaygun/v13-Invite-Manager?style=for-the-badge"></a>
 <a href="https://discord.gg/MEdUDMSTMx"><img alt="Destek Al" src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white"></a>
 </p>
 <h3 align="center">TAMAMEN ÖZELLEŞTİRİLEBİLİR DISCORD DAVET YÖNETİM BOTU</h3>
