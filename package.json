@@ -11,15 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/ErenBaygun/v13-Invite-Manager.git"
   },
-  "keywords": [
-    "ErenBaygun",
-    "v13",
-    "discord",
-    "discord-bot",
-    "discord-js",
-    "invite",
-    "invite-manager"
-  ],
+  "keywords": [],
   "author": "ErenBaygun",
   "license": "ISC",
   "bugs": {
