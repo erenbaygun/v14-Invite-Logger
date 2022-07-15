@@ -53,7 +53,7 @@ module.exports = {
 
 
 ## 🛑 Önemli
-- Bir sorunla karşılaşırsan benimle discord üzerinden iletişime geçebilirsin. Discord: [Sanctus#7296](https://discord.gg/MEdUDMSTMx)
+- Bir sorunla karşılaşırsan benimle discord üzerinden iletişime geçebilirsin. [Sanctus#7296](https://discord.gg/MEdUDMSTMx)
 - Bir önerin mi var? Fikrini [burada](https://github.com/ErenBaygun/v13-Invite-Manager/issues/new?title=Öneri) ya da [discord sunucumda](https://discord.gg/MEdUDMSTMx) paylaşabilirsin!
-- Hakkımda daha fazla bilgi için web siteme göz at --> [sanct.me](https://sanct.me)
+- Hakkımda daha fazla bilgi için --> **[Web siteme göz at](https://sanct.me)**
 - Botu beğendiysen ⭐ atmayı unutma!
