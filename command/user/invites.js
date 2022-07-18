@@ -35,12 +35,14 @@ module.exports = {
             activeInviteText += `- gg/${invite.code}  --->  **${invite.uses}** kullanım\n`
         })
 
-        let embed = new Discord.MessageEmbed()
+        let embed = new Discord.EmbedBuilder()
             .setAuthor({ name: user.tag, iconURL: user.displayAvatarURL({ dynamic: true }) })
-            .setColor("AQUA")
-            .addField('Sıralama:', `#${rank}`, true)
-            .addField('Davet sayısı:', `${userData.invites}`, true)
-            .addField('Aktif davetler:', `${activeInviteText}`)
+            .setColor("Aqua")
+            .addFields([
+                { name: 'Sıralama:', value: `#${rank}`, inline: true },
+                { name: 'Davet sayısı:', value: `${userData.invites}`, inline: true },
+                { name: 'Aktif davetler:', value: `${activeInviteText}` }
+            ])
             .setTimestamp()
 
         message.reply({ embeds: [embed] })

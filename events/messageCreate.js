@@ -1,6 +1,9 @@
+const { ChannelType } = require('discord.js');
+
 module.exports = async (client, message) => {
+
     if (message.author.bot) { return }
-    if (message.channel.type == 'dm') { return }
+    if (message.channel.type == ChannelType.DM) { return }
     let prefix = client.config.bot.prefix
 
     if (!message.content.startsWith(prefix)) { return }

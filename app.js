@@ -1,6 +1,6 @@
-const { Client, Collection } = require("discord.js");
+const { Client, Collection, GatewayIntentBits } = require("discord.js");
 
-const client = global.client = new Client({ intents: 32767 })
+const client = global.client = new Client({ intents: 131071 });
 
 //SET COLLECTION
 client.commandes = new Collection();

@@ -1,4 +1,5 @@
 const Discord = require("discord.js")
+const { ButtonStyle } = require("discord.js")
 const database = require("../../database/func")
 
 module.exports = {
@@ -22,31 +23,31 @@ module.exports = {
             }
         })
 
-        let embed = new Discord.MessageEmbed()
+        let embed = new Discord.EmbedBuilder()
             .setAuthor({ name: `📋 Sunucu Davet Sıralaması`, iconURL: message.guild.iconURL({ dynamic: true }) })
-            .setColor("AQUA")
+            .setColor("Aqua")
             .setDescription(text)
             .setFooter({ text: `Sayfa 1 / ${i % 10 == 0 ? Math.floor(i / 10) : Math.floor((i / 10) + 1)}` })
 
-        let firstControlButton = new Discord.MessageButton()
-            .setStyle("PRIMARY")
+        let firstControlButton = new Discord.ButtonBuilder()
+            .setStyle(ButtonStyle.Primary)
             .setCustomId(`lb_first`)
             .setEmoji(`⏮`)
             .setDisabled(true)
 
-        let backControlButton = new Discord.MessageButton()
-            .setStyle("PRIMARY")
+        let backControlButton = new Discord.ButtonBuilder()
+            .setStyle(ButtonStyle.Primary)
             .setCustomId(`lb_back`)
             .setEmoji(`◀`)
             .setDisabled(true)
 
-        let nextControlButton = new Discord.MessageButton()
-            .setStyle("PRIMARY")
+        let nextControlButton = new Discord.ButtonBuilder()
+            .setStyle(ButtonStyle.Primary)
             .setCustomId(`lb_2`)
             .setEmoji(`▶`)
 
-        let lastControlButton = new Discord.MessageButton()
-            .setStyle("PRIMARY")
+        let lastControlButton = new Discord.ButtonBuilder()
+            .setStyle(ButtonStyle.Primary)
             .setCustomId(`lb_last`)
             .setEmoji(`⏭`)
 
@@ -55,7 +56,7 @@ module.exports = {
             lastControlButton.setDisabled(true)
         }
 
-        let controlButtons = new Discord.MessageActionRow()
+        let controlButtons = new Discord.ActionRowBuilder()
             .setComponents([firstControlButton, backControlButton, nextControlButton, lastControlButton])
 
         message.reply({

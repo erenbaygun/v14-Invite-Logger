@@ -6,7 +6,7 @@ module.exports = {
     name: 'reset',
     aliases: ['resetInvites'],
     dir: "admin",
-    permissions: ["MANAGE_GUILD"],
+    permissions: ["ManageGuild"],
 
     run: async (client, message, args) => {
         let user;
@@ -41,12 +41,14 @@ module.exports = {
             activeInviteText += `- gg/${invite.code}  --->  **${invite.uses}** kullanım\n`
         })
 
-        let embed = new Discord.MessageEmbed()
-            .setAuthor({ name: user.tag, iconURL: user.displayAvatarURL({ dynamic: true }) })
-            .setColor("AQUA")
-            .addField('Sıralama:', `#${rank}`, true)
-            .addField('Davet sayısı:', `0`, true)
-            .addField('Aktif davetler:', `${activeInviteText}`)
+        let embed = new Discord.EmbedBuilder()
+            .setAuthor({ name: user.tag, iconURL: user.displayAvatarURL() })
+            .setColor("Aqua")
+            .addFields([
+                { name: 'Sıralama:', value: `#${rank}`, inline: true },
+                { name: 'Davet sayısı:', value: `0`, inline: true },
+                { name: 'Aktif davetler:', value: `${activeInviteText}` }
+            ])
             .setTimestamp()
 
         message.reply({ content: `**Kullanıcının davet sayısı sıfırlandı.**`, embeds: [embed] })
