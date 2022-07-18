@@ -1,9 +1,9 @@
 <p align="center">
-<a href="https://github.com/ErenBaygun?tab=repositories"><img alt="GitHub Stars" src="https://img.shields.io/github/stars/ErenBaygun/v13-Invite-Logger?style=for-the-badge"></a> 
-<a href="https://github.com/ErenBaygun/v13-Invite-Logger/fork"><img alt="GitHub Forks" src="https://img.shields.io/github/forks/ErenBaygun/v13-Invite-Logger?style=for-the-badge"></a>
+<a href="https://github.com/ErenBaygun?tab=repositories"><img alt="GitHub Stars" src="https://img.shields.io/github/stars/ErenBaygun/v14-Invite-Logger?style=for-the-badge"></a> 
+<a href="https://github.com/ErenBaygun/v14-Invite-Logger/fork"><img alt="GitHub Forks" src="https://img.shields.io/github/forks/ErenBaygun/v14-Invite-Logger?style=for-the-badge"></a>
 <a href="https://discord.gg/MEdUDMSTMx"><img alt="Destek Al" src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white"></a>
 </p>
-<h3 align="center">🎈 TAMAMEN ÖZELLEŞTİRİLEBİLİR DISCORD DAVET KAYIT BOTU 🎈</h3>
+<h3 align="center">🎈 V14 BUTONLU VE TAMAMEN ÖZELLEŞTİRİLEBİLİR DISCORD DAVET KAYIT BOTU 🎈</h3>
 
 ---
 
@@ -18,7 +18,7 @@
 - İndirdiğiniz dosyaları zip dosyasından çıkarıp bir dosya haline getirin.
 - Shift + Sağ Tık ile tıklayın. PowerShell şeklinde açın.
 - Açılan pencere içerisine "npm install" yazın ve "Enter" basın.
-- Metin düzenleyiciniz ile **config.js** dosyasını [buraya](https://github.com/ErenBaygun/v13-Invite-Logger/#-config) göre doldurun.
+- Metin düzenleyiciniz ile **config.js** dosyasını [buraya](https://github.com/ErenBaygun/v14-Invite-Logger/#-config) göre doldurun.
 - Düzenlediğiniz config.js dosyasını kaydedip PowerShell penceresine "node app.js" yazın ve "Enter" basın.
 - Tokenini girmiş olduğunuz bot sunucuda ekliyse çalışmaya başlayacaktır.
 - Botu beğendiysen ⭐ atmayı unutma!
@@ -54,6 +54,6 @@ module.exports = {
 
 ## 🛑 Önemli
 - Bir sorunla karşılaşırsan benimle discord üzerinden iletişime geçebilirsin. [Sanctus#7296](https://discord.gg/MEdUDMSTMx)
-- Bir önerin mi var? Fikrini [burada](https://github.com/ErenBaygun/v13-Invite-Logger/issues/new?title=Öneri) ya da [discord sunucumda](https://discord.gg/MEdUDMSTMx) paylaşabilirsin!
+- Bir önerin mi var? Fikrini [burada](https://github.com/ErenBaygun/v14-Invite-Logger/issues/new?title=Öneri) ya da [discord sunucumda](https://discord.gg/MEdUDMSTMx) paylaşabilirsin!
 - Hakkımda daha fazla bilgi için --> **[Web siteme göz at](https://sanct.me)**
 - Botu beğendiysen ⭐ atmayı unutma!
