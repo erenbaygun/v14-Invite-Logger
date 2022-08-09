@@ -43,9 +43,9 @@ module.exports = {
     },
     
     text: {
-        joinMessage: "SUNUCUYA DAVETLE KATILDI LOG MESAJI", // örnek ---> "**{newMember} sunucuya katıldı.**\nDavet eden: {inviter} ( {inviteCount} Davet )"
-        vaintyJoinMessage: "SUNUCUYA ÖZEL URL İLE KATILDI LOG MESAJI", // örnek ---> "**{newMember} sunucuya katıldı.**\nÖzel url'yi kullanarak katıldı. ( {vanityUses} )"
-        leaveMessage: "SUNUCUDAN AYRILDI LOG MESAJI" // örnek ---> "**{member} sunucudan ayrıldı.**"
+        joinMessage: "SUNUCUYA DAVETLE KATILDI LOG MESAJI", // ÖRNEK ---> "**{newMember} sunucuya katıldı.**\nDavet eden: {inviter} ( {inviteCount} Davet )"
+        vaintyJoinMessage: "SUNUCUYA ÖZEL URL İLE KATILDI LOG MESAJI", // ÖRNEK ---> "**{newMember} sunucuya katıldı.**\nÖzel url'yi kullanarak katıldı. ( {vanityUses} )"
+        leaveMessage: "SUNUCUDAN AYRILDI LOG MESAJI" // ÖRNEK ---> "**{member} sunucudan ayrıldı.**"
     }
 };
 ```
