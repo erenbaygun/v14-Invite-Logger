@@ -3,7 +3,7 @@
 <a href="https://github.com/ErenBaygun/v14-Invite-Logger/fork"><img alt="GitHub Forks" src="https://img.shields.io/github/forks/ErenBaygun/v14-Invite-Logger?style=for-the-badge"></a>
 <a href="https://discord.gg/MEdUDMSTMx"><img alt="Destek Al" src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white"></a>
 </p>
-<h3 align="center">🎈 V14 BUTONLU VE TAMAMEN ÖZELLEŞTİRİLEBİLİR DISCORD DAVET KAYIT BOTU 🎈</h3>
+<h3 align="center">⭐ V14 BUTONLU VE TAMAMEN ÖZELLEŞTİRİLEBİLİR DISCORD DAVET KAYIT BOTU ⭐</h3>
 
 ---
 
