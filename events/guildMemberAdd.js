@@ -20,7 +20,8 @@ module.exports = async (client, member) => {
 
         let inviteLogChannel = await member.guild.channels.cache.get(client.config.channels.inviteLog)
 
-        let joinText = client.config.text.vaintyJoinMessage.replace(`{newMember}`, member)
+        let vanityData = await member.guild.fetchVanityData()
+        let joinText = client.config.text.vaintyJoinMessage.replace(`{newMember}`, member).replace(`{vanityUses}`, vanityData.uses)
         await inviteLogChannel.send({ content: joinText })
 
         client.logger.log(`${client.color.chalkcolor.green(`[+]`)} ${client.color.chalkcolor.magenta(`${member.user.tag}`)}, sunucuya katıldı - Özel url'yi kullanarak katıldı`)
