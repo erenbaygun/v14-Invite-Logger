@@ -1,11 +1,15 @@
 const mongoose = require("mongoose");
 const database = require("../database/func")
+const { ActivityType } = require("discord.js")
 
 module.exports = async (client) => {
     client.logger.info(`[!] ${client.user.username} başlatılıyor...`)
     client.logger.info(`[!] Bot ${client.commandes.size} komuta sahip`)
     client.logger.info(`[!] Botu ekle: https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=applications.commands%20bot`)
-    client.user.setActivity(client.config.bot.status, { type: 'PLAYING' })
+    client.user.setActivity(client.config.bot.status, { type: ActivityType.Playing })
+    setInterval(() => {
+        client.user.setActivity(client.config.bot.status, { type: ActivityType.Playing })
+    }, 60000);
 
     await mongoose.connect(client.config.mongoURL, {
         keepAlive: true
