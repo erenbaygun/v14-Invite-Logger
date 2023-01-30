@@ -11,6 +11,7 @@ module.exports = async (client) => {
         client.user.setActivity(client.config.bot.status, { type: ActivityType.Playing })
     }, 60000);
 
+    await mongoose.set('strictQuery', false);
     await mongoose.connect(client.config.mongoURL, {
         keepAlive: true
     }).then(() => {
