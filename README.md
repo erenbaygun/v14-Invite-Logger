@@ -55,5 +55,5 @@ module.exports = {
 ## 🛑 Önemli
 - Bir sorunla karşılaşırsan benimle discord üzerinden iletişime geçebilirsin. [vsanctus](https://discord.gg/MEdUDMSTMx)
 - Bir önerin mi var? Fikrini [burada](https://github.com/ErenBaygun/v14-Invite-Logger/issues/new?title=Öneri) ya da [discord sunucumda](https://discord.gg/MEdUDMSTMx) paylaşabilirsin!
-- Hakkımda daha fazla bilgi için --> **[Web siteme göz at](https://sanct.me)**
+- Hakkımda daha fazla bilgi için --> **[Web siteme göz at](https://erenbaygun.github.io)**
 - Botu beğendiysen ⭐ atmayı unutma!
